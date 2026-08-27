@@ -1,0 +1,8 @@
+﻿node_modules/
+.tmp/
+
+# Generated artifacts
+generated/
+
+# Zoho CRM OAS is downloaded automatically by sync:zoho
+vendor/zoho-crm/

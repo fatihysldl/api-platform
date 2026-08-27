@@ -1,0 +1,38 @@
+name: API Platform CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 5 * * *'
+
+jobs:
+  validate-and-generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm install
+      - name: Validate internal OpenAPI
+        run: npm run validate
+      - name: Sync official Zoho CRM OAS
+        run: npm run sync:zoho
+      - name: Validate downloaded Zoho OAS files
+        run: npm run validate:zoho
+      - name: Generate Swagger multi-spec config
+        run: npm run swagger:config
+      - name: Generate Postman collections
+        run: npm run postman
+      - name: Upload generated API artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-platform-generated
+          path: |
+            generated/postman/
+            swagger/swagger-config.json
+            vendor/zoho-crm/SOURCE.json

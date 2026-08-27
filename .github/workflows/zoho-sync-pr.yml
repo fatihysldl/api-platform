@@ -1,0 +1,44 @@
+name: Sync Zoho CRM OAS
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '27 5 * * *'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm install
+      - name: Sync official Zoho CRM OAS
+        run: npm run sync:zoho
+      - name: Validate Zoho OAS
+        run: npm run validate:zoho
+      - name: Rebuild Swagger catalog
+        run: npm run swagger:config
+      - name: Rebuild Postman collections
+        run: npm run postman
+      - name: Open update pull request when Zoho changes
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: automation/zoho-crm-oas-sync
+          delete-branch: true
+          commit-message: 'chore: sync Zoho CRM v8 OAS'
+          title: 'chore: sync Zoho CRM v8 OAS'
+          body: |
+            Automated synchronization from the official `zoho/crm-oas` repository.
+
+            This PR updates the unmodified Zoho CRM v8 OAS vendor files and regenerates the Swagger catalog and Postman collections.
+          add-paths: |
+            vendor/zoho-crm/**
+            swagger/swagger-config.json
+            generated/postman/**

@@ -1,0 +1,432 @@
+{
+  "urls": [
+    {
+      "url": "/specs/internal/openapi.yaml",
+      "name": "Company / Internal API"
+    },
+    {
+      "url": "/specs/zoho/apis.json",
+      "name": "Zoho CRM v8 - Available Apis"
+    },
+    {
+      "url": "/specs/zoho/appointment_preference.json",
+      "name": "Zoho CRM v8 - Appointment Preference"
+    },
+    {
+      "url": "/specs/zoho/appointments.json",
+      "name": "Zoho CRM v8 - Appointments API"
+    },
+    {
+      "url": "/specs/zoho/assignment_rules.json",
+      "name": "Zoho CRM v8 - Assignment rules"
+    },
+    {
+      "url": "/specs/zoho/associate_email.json",
+      "name": "Zoho CRM v8 - Zoho CRM Associate Email API"
+    },
+    {
+      "url": "/specs/zoho/attachments.json",
+      "name": "Zoho CRM v8 - Attachments"
+    },
+    {
+      "url": "/specs/zoho/audit_log_export.json",
+      "name": "Zoho CRM v8 - Audit Log Export"
+    },
+    {
+      "url": "/specs/zoho/available_currencies.json",
+      "name": "Zoho CRM v8 - Available Currencies"
+    },
+    {
+      "url": "/specs/zoho/bulk_read.json",
+      "name": "Zoho CRM v8 - Bulk Read"
+    },
+    {
+      "url": "/specs/zoho/bulk_write.json",
+      "name": "Zoho CRM v8 - Bulk Write"
+    },
+    {
+      "url": "/specs/zoho/business_hours.json",
+      "name": "Zoho CRM v8 - Business Hours"
+    },
+    {
+      "url": "/specs/zoho/cadences.json",
+      "name": "Zoho CRM v8 - Cadences"
+    },
+    {
+      "url": "/specs/zoho/cadences_execution.json",
+      "name": "Zoho CRM v8 - Cadence Execution"
+    },
+    {
+      "url": "/specs/zoho/call_preferences.json",
+      "name": "Zoho CRM v8 - Call Preferences"
+    },
+    {
+      "url": "/specs/zoho/cancel_meetings.json",
+      "name": "Zoho CRM v8 - Cancel Meetings"
+    },
+    {
+      "url": "/specs/zoho/change_owner.json",
+      "name": "Zoho CRM v8 - Change Owner"
+    },
+    {
+      "url": "/specs/zoho/composite_requests.json",
+      "name": "Zoho CRM v8 - Composite Requests"
+    },
+    {
+      "url": "/specs/zoho/contact_roles.json",
+      "name": "Zoho CRM v8 - Contact Roles"
+    },
+    {
+      "url": "/specs/zoho/conversion_option.json",
+      "name": "Zoho CRM v8 - Zoho CRM Lead Conversion Options API"
+    },
+    {
+      "url": "/specs/zoho/convert.json",
+      "name": "Zoho CRM v8 - Zoho CRM Lead Conversion API"
+    },
+    {
+      "url": "/specs/zoho/coql.json",
+      "name": "Zoho CRM v8 - Coql"
+    },
+    {
+      "url": "/specs/zoho/currencies.json",
+      "name": "Zoho CRM v8 - Currencies"
+    },
+    {
+      "url": "/specs/zoho/custom_views.json",
+      "name": "Zoho CRM v8 - Custom Views"
+    },
+    {
+      "url": "/specs/zoho/data_sharing.json",
+      "name": "Zoho CRM v8 - Data Sharing"
+    },
+    {
+      "url": "/specs/zoho/deal_contact_roles.json",
+      "name": "Zoho CRM v8 - Deal Contact Roles"
+    },
+    {
+      "url": "/specs/zoho/deal_link_emails.json",
+      "name": "Zoho CRM v8 - Deal Link Emails"
+    },
+    {
+      "url": "/specs/zoho/download_attachments.json",
+      "name": "Zoho CRM v8 - Download Email Attachments"
+    },
+    {
+      "url": "/specs/zoho/download_inline_images.json",
+      "name": "Zoho CRM v8 - Download Inline Images"
+    },
+    {
+      "url": "/specs/zoho/duplicate_check_preference.json",
+      "name": "Zoho CRM v8 - Duplicate Check Preference"
+    },
+    {
+      "url": "/specs/zoho/email_drafts.json",
+      "name": "Zoho CRM v8 - Email Drafts"
+    },
+    {
+      "url": "/specs/zoho/email_templates.json",
+      "name": "Zoho CRM v8 - Email Templates"
+    },
+    {
+      "url": "/specs/zoho/emails_sharing_details.json",
+      "name": "Zoho CRM v8 - Get Email Shared Details"
+    },
+    {
+      "url": "/specs/zoho/features.json",
+      "name": "Zoho CRM v8 - Features"
+    },
+    {
+      "url": "/specs/zoho/fetch_full_data.json",
+      "name": "Zoho CRM v8 - Fetch Full Data"
+    },
+    {
+      "url": "/specs/zoho/field_updates.json",
+      "name": "Zoho CRM v8 - Field Updates"
+    },
+    {
+      "url": "/specs/zoho/fields.json",
+      "name": "Zoho CRM v8 - Fields API"
+    },
+    {
+      "url": "/specs/zoho/files.json",
+      "name": "Zoho CRM v8 - Files"
+    },
+    {
+      "url": "/specs/zoho/find_and_merge.json",
+      "name": "Zoho CRM v8 - Find And Merge"
+    },
+    {
+      "url": "/specs/zoho/fiscal_year.json",
+      "name": "Zoho CRM v8 - Fiscal Year"
+    },
+    {
+      "url": "/specs/zoho/from_addresses.json",
+      "name": "Zoho CRM v8 - From Addresses"
+    },
+    {
+      "url": "/specs/zoho/get_related_records_count.json",
+      "name": "Zoho CRM v8 - Related Records Count"
+    },
+    {
+      "url": "/specs/zoho/global_picklists.json",
+      "name": "Zoho CRM v8 - Global Picklists"
+    },
+    {
+      "url": "/specs/zoho/holidays.json",
+      "name": "Zoho CRM v8 - Zoho CRM Holidays API"
+    },
+    {
+      "url": "/specs/zoho/inventory_convert.json",
+      "name": "Zoho CRM v8 - Inventory Convert"
+    },
+    {
+      "url": "/specs/zoho/inventory_templates.json",
+      "name": "Zoho CRM v8 - Inventory Templates"
+    },
+    {
+      "url": "/specs/zoho/layouts.json",
+      "name": "Zoho CRM v8 - Layouts API"
+    },
+    {
+      "url": "/specs/zoho/layouts_activate_deactivate.json",
+      "name": "Zoho CRM v8 - Layout Activate and Deactivate API"
+    },
+    {
+      "url": "/specs/zoho/locking_informations.json",
+      "name": "Zoho CRM v8 - Locking Information"
+    },
+    {
+      "url": "/specs/zoho/mail_merge.json",
+      "name": "Zoho CRM v8 - Mail Merge"
+    },
+    {
+      "url": "/specs/zoho/map_dependency.json",
+      "name": "Zoho CRM v8 - Map Dependency"
+    },
+    {
+      "url": "/specs/zoho/mass_change_owner.json",
+      "name": "Zoho CRM v8 - Mass Change Owner"
+    },
+    {
+      "url": "/specs/zoho/mass_convert.json",
+      "name": "Zoho CRM v8 - Mass Convert"
+    },
+    {
+      "url": "/specs/zoho/mass_delete_cvid.json",
+      "name": "Zoho CRM v8 - Mass Delete Api"
+    },
+    {
+      "url": "/specs/zoho/mass_delete_tags.json",
+      "name": "Zoho CRM v8 - Mass Delete Tags"
+    },
+    {
+      "url": "/specs/zoho/mass_update.json",
+      "name": "Zoho CRM v8 - Mass Update API"
+    },
+    {
+      "url": "/specs/zoho/module_search.json",
+      "name": "Zoho CRM v8 - Search Records"
+    },
+    {
+      "url": "/specs/zoho/modules.json",
+      "name": "Zoho CRM v8 - Modules"
+    },
+    {
+      "url": "/specs/zoho/notes.json",
+      "name": "Zoho CRM v8 - Notes"
+    },
+    {
+      "url": "/specs/zoho/notifications.json",
+      "name": "Zoho CRM v8 - Notifications"
+    },
+    {
+      "url": "/specs/zoho/org.json",
+      "name": "Zoho CRM v8 - Org"
+    },
+    {
+      "url": "/specs/zoho/org_photo.json",
+      "name": "Zoho CRM v8 - Org Photo"
+    },
+    {
+      "url": "/specs/zoho/ownership_history.json",
+      "name": "Zoho CRM v8 - Zoho CRM Ownership History API"
+    },
+    {
+      "url": "/specs/zoho/pick_list_values.json",
+      "name": "Zoho CRM v8 - Pick List Values"
+    },
+    {
+      "url": "/specs/zoho/pipeline.json",
+      "name": "Zoho CRM v8 - Pipeline"
+    },
+    {
+      "url": "/specs/zoho/portal_user_type.json",
+      "name": "Zoho CRM v8 - Portal User Type"
+    },
+    {
+      "url": "/specs/zoho/portal_users.json",
+      "name": "Zoho CRM v8 - Portal Users"
+    },
+    {
+      "url": "/specs/zoho/portals.json",
+      "name": "Zoho CRM v8 - Portals"
+    },
+    {
+      "url": "/specs/zoho/profiles.json",
+      "name": "Zoho CRM v8 - Profiles API"
+    },
+    {
+      "url": "/specs/zoho/record.json",
+      "name": "Zoho CRM v8 - Records"
+    },
+    {
+      "url": "/specs/zoho/record_count.json",
+      "name": "Zoho CRM v8 - Module Record Count"
+    },
+    {
+      "url": "/specs/zoho/record_locking_configurations.json",
+      "name": "Zoho CRM v8 - Record Locking Configuration"
+    },
+    {
+      "url": "/specs/zoho/record_photo.json",
+      "name": "Zoho CRM v8 - Record Photo"
+    },
+    {
+      "url": "/specs/zoho/record_share_email.json",
+      "name": "Zoho CRM v8 - Record Level Sharing Of Emails"
+    },
+    {
+      "url": "/specs/zoho/recycle_bin.json",
+      "name": "Zoho CRM v8 - Recycle Bin"
+    },
+    {
+      "url": "/specs/zoho/related_lists.json",
+      "name": "Zoho CRM v8 - Related Lists"
+    },
+    {
+      "url": "/specs/zoho/related_notes.json",
+      "name": "Zoho CRM v8 - Related Notes"
+    },
+    {
+      "url": "/specs/zoho/related_records.json",
+      "name": "Zoho CRM v8 - Zoho CRM Related Records API"
+    },
+    {
+      "url": "/specs/zoho/roles.json",
+      "name": "Zoho CRM v8 - Roles"
+    },
+    {
+      "url": "/specs/zoho/scoring_rules.json",
+      "name": "Zoho CRM v8 - Scoring Rules"
+    },
+    {
+      "url": "/specs/zoho/send_mail.json",
+      "name": "Zoho CRM v8 - Send Mail"
+    },
+    {
+      "url": "/specs/zoho/service_preference.json",
+      "name": "Zoho CRM v8 - Service Preference"
+    },
+    {
+      "url": "/specs/zoho/services.json",
+      "name": "Zoho CRM v8 - Services API"
+    },
+    {
+      "url": "/specs/zoho/share_records.json",
+      "name": "Zoho CRM v8 - Share Records"
+    },
+    {
+      "url": "/specs/zoho/shift_hours.json",
+      "name": "Zoho CRM v8 - Shift Hours"
+    },
+    {
+      "url": "/specs/zoho/tags.json",
+      "name": "Zoho CRM v8 - Tags CRUD API"
+    },
+    {
+      "url": "/specs/zoho/tags_actions.json",
+      "name": "Zoho CRM v8 - Tag Actions API"
+    },
+    {
+      "url": "/specs/zoho/territories.json",
+      "name": "Zoho CRM v8 - Territories"
+    },
+    {
+      "url": "/specs/zoho/territory_users.json",
+      "name": "Zoho CRM v8 - Territory Users"
+    },
+    {
+      "url": "/specs/zoho/timelines.json",
+      "name": "Zoho CRM v8 - Timelines"
+    },
+    {
+      "url": "/specs/zoho/unblock_email.json",
+      "name": "Zoho CRM v8 - Unblock Email"
+    },
+    {
+      "url": "/specs/zoho/unsubscribe_links.json",
+      "name": "Zoho CRM v8 - unsubscribe_links"
+    },
+    {
+      "url": "/specs/zoho/upload.json",
+      "name": "Zoho CRM v8 - Upload"
+    },
+    {
+      "url": "/specs/zoho/user_groups.json",
+      "name": "Zoho CRM v8 - User Groups"
+    },
+    {
+      "url": "/specs/zoho/users.json",
+      "name": "Zoho CRM v8 - Users API"
+    },
+    {
+      "url": "/specs/zoho/users_territories.json",
+      "name": "Zoho CRM v8 - Users Territories"
+    },
+    {
+      "url": "/specs/zoho/users_transfer.json",
+      "name": "Zoho CRM v8 - Users Transfer"
+    },
+    {
+      "url": "/specs/zoho/variable_groups.json",
+      "name": "Zoho CRM v8 - Variable Groups"
+    },
+    {
+      "url": "/specs/zoho/variables.json",
+      "name": "Zoho CRM v8 - Variables"
+    },
+    {
+      "url": "/specs/zoho/webhooks.json",
+      "name": "Zoho CRM v8 - Webhooks"
+    },
+    {
+      "url": "/specs/zoho/wizards.json",
+      "name": "Zoho CRM v8 - Wizards"
+    },
+    {
+      "url": "/specs/zoho/workflow_configurations.json",
+      "name": "Zoho CRM v8 - Workflow Configurations"
+    },
+    {
+      "url": "/specs/zoho/workflow_rules.json",
+      "name": "Zoho CRM v8 - Workflow Rules"
+    },
+    {
+      "url": "/specs/zoho/workflow_tasks.json",
+      "name": "Zoho CRM v8 - Automation Task"
+    },
+    {
+      "url": "/specs/zoho/zia_enrichment.json",
+      "name": "Zoho CRM v8 - Zia Enrichment Configuration API"
+    },
+    {
+      "url": "/specs/zoho/zia_org_enrichment.json",
+      "name": "Zoho CRM v8 - ZIA Organization Enrichment API"
+    }
+  ],
+  "urls.primaryName": "Company / Internal API",
+  "deepLinking": true,
+  "displayRequestDuration": true,
+  "persistAuthorization": true
+}

@@ -1,0 +1,131 @@
+openapi: 3.0.3
+info:
+  title: Company API Platform
+  version: 1.0.0
+  description: |
+    Central OpenAPI specification for internal APIs and integrations.
+    Keep this file as the source of truth for Swagger, Postman and generated SDKs.
+servers:
+  - url: http://localhost:3000/api
+    description: Local
+  - url: https://api.example.com/api
+    description: Production
+
+tags:
+  - name: Customers
+  - name: Contracts
+
+paths:
+  /customers/{id}:
+    get:
+      tags: [Customers]
+      summary: Get customer by ID
+      operationId: getCustomerById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Customer found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /contracts:
+    post:
+      tags: [Contracts]
+      summary: Create contract
+      operationId: createContract
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateContractRequest'
+      responses:
+        '201':
+          description: Contract created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Contract'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    Customer:
+      type: object
+      required: [id, name]
+      properties:
+        id:
+          type: string
+          example: '12345'
+        name:
+          type: string
+          example: Acme Ltd.
+        email:
+          type: string
+          format: email
+          example: api@example.com
+
+    CreateContractRequest:
+      type: object
+      required: [accountId, startDate]
+      properties:
+        accountId:
+          type: string
+          example: '12345'
+        startDate:
+          type: string
+          format: date
+          example: '2026-08-27'
+
+    Contract:
+      type: object
+      required: [id, status]
+      properties:
+        id:
+          type: string
+          example: '98765'
+        status:
+          type: string
+          enum: [draft, active, cancelled]
+          example: active
+
+  responses:
+    BadRequest:
+      description: Invalid request
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+                example: Invalid request
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+                example: Resource not found
+
+security:
+  - bearerAuth: []
