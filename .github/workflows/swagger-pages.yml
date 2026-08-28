@@ -52,6 +52,7 @@ jobs:
           mkdir -p dist/specs/zoho
 
           cp swagger/index.html dist/index.html
+          cp swagger/cloudyflex-logo.png dist/cloudyflex-logo.png
           cp swagger/swagger-config.json dist/swagger-config.json
           cp openapi/openapi.yaml dist/specs/internal/openapi.yaml
           cp zoho/crm/v8.0/*.json dist/specs/zoho/

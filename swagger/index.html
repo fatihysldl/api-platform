@@ -16,6 +16,29 @@
       margin: 0;
       background: #fafafa;
     }
+
+    /* Hide the default Swagger branding */
+    .swagger-ui .topbar .link {
+      display: none;
+    }
+
+    /* Keep the top bar content vertically aligned */
+    .swagger-ui .topbar .topbar-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Cloudyflex logo */
+    .cfx-logo {
+      height: 42px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* Keep API selector on the right */
+    .swagger-ui .topbar .download-url-wrapper {
+      margin-left: auto;
+    }
   </style>
 </head>
 
@@ -42,11 +65,26 @@
         SwaggerUIStandalonePreset
       ],
 
-      layout: 'StandaloneLayout'
+      layout: 'StandaloneLayout',
+
+      onComplete: function () {
+        const topbarWrapper = document.querySelector(
+          '.swagger-ui .topbar .topbar-wrapper'
+        );
+
+        if (topbarWrapper && !document.querySelector('.cfx-logo')) {
+          const logo = document.createElement('img');
+
+          logo.src = './cloudyflex-logo.png';
+          logo.alt = 'Cloudyflex';
+          logo.className = 'cfx-logo';
+
+          topbarWrapper.prepend(logo);
+        }
+      }
     });
   };
 </script>
 
 </body>
 </html>
-
