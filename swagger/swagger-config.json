@@ -2,7 +2,7 @@
   "urls": [
     {
       "url": "specs/internal/openapi.yaml",
-      "name": "Company / Internal API"
+      "name": "CFX Internal API"
     },
     {
       "url": "specs/zoho/apis.json",
@@ -425,7 +425,7 @@
       "name": "Zoho CRM v8 - ZIA Organization Enrichment API"
     }
   ],
-  "urls.primaryName": "Company / Internal API",
+  "urls.primaryName": "CFX Internal API",
   "deepLinking": true,
   "displayRequestDuration": true,
   "persistAuthorization": true

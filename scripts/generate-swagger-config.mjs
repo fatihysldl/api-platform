@@ -6,7 +6,7 @@ const zohoDir = join(root, 'zoho', 'crm', 'v8.0');
 const files = readdirSync(zohoDir).filter((f) => f.endsWith('.json')).sort();
 
 const urls = [
-  { url: 'specs/internal/openapi.yaml', name: 'Company / Internal API' },
+  { url: 'specs/internal/openapi.yaml', name: 'CFX Internal API' },
   ...files.map((file) => {
     let title = file;
     try {
@@ -19,11 +19,12 @@ const urls = [
 mkdirSync(join(root, 'swagger'), { recursive: true });
 writeFileSync(join(root, 'swagger', 'swagger-config.json'), JSON.stringify({
   urls,
-  'urls.primaryName': 'Company / Internal API',
+  'urls.primaryName': 'CFX Internal API',
   deepLinking: true,
   displayRequestDuration: true,
   persistAuthorization: true
 }, null, 2) + '\n');
 console.log(`Swagger selector generated with ${urls.length} API definitions.`);
+
 
 

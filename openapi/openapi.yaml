@@ -1,9 +1,9 @@
-openapi: 3.0.3
+﻿openapi: 3.0.3
 info:
-  title: Company API Platform
+  title: CFX Internal API
   version: 1.0.0
   description: |
-    Central OpenAPI specification for internal APIs and integrations.
+    Internal API specification for the CFX API Portal.
     Keep this file as the source of truth for Swagger, Postman and generated SDKs.
 servers:
   - url: http://localhost:3000/api
@@ -129,3 +129,4 @@ components:
 
 security:
   - bearerAuth: []
+
