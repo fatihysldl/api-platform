@@ -1,4 +1,4 @@
-name: Sync Zoho CRM OAS
+﻿name: Sync Zoho CRM OAS
 
 on:
   workflow_dispatch:
@@ -39,6 +39,7 @@ jobs:
 
             This PR updates the unmodified Zoho CRM v8 OAS vendor files and regenerates the Swagger catalog and Postman collections.
           add-paths: |
-            vendor/zoho-crm/**
+            zoho/crm/**
             swagger/swagger-config.json
             generated/postman/**
+

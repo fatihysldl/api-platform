@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "company-api-platform",
   "version": "2.0.0",
   "private": true,
@@ -11,7 +11,7 @@
     "postman:internal": "openapi2postmanv2 -s openapi/openapi.yaml -o generated/postman/company-api.postman_collection.json -p",
     "sdk:typescript": "openapi-generator-cli generate -i openapi/openapi.yaml -g typescript-axios -o generated/sdk/typescript",
     "sdk:csharp": "openapi-generator-cli generate -i openapi/openapi.yaml -g csharp -o generated/sdk/csharp",
-    "sdk:zoho:record:typescript": "openapi-generator-cli generate -i vendor/zoho-crm/v8.0/record.json -g typescript-axios -o generated/sdk/zoho-record-typescript",
+    "sdk:zoho:record:typescript": "openapi-generator-cli generate -i zoho/crm/v8.0/record.json -g typescript-axios -o generated/sdk/zoho-record-typescript",
     "generate": "npm run validate && npm run sync:zoho && npm run validate:zoho && npm run swagger:config && npm run postman",
     "docs": "npm run swagger:config && docker compose up swagger-ui",
     "docs:refresh": "npm run sync:zoho && npm run docs"
@@ -22,3 +22,4 @@
     "openapi-to-postmanv2": "^6.3.2"
   }
 }
+

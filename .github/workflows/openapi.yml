@@ -1,4 +1,4 @@
-name: API Platform CI
+﻿name: API Platform CI
 
 on:
   push:
@@ -35,4 +35,5 @@ jobs:
           path: |
             generated/postman/
             swagger/swagger-config.json
-            vendor/zoho-crm/SOURCE.json
+            zoho/crm/SOURCE.json
+

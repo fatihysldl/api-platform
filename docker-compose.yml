@@ -1,4 +1,4 @@
-services:
+﻿services:
   swagger-ui:
     image: swaggerapi/swagger-ui:latest
     ports:
@@ -8,4 +8,5 @@ services:
     volumes:
       - ./swagger:/usr/share/nginx/html/config:ro
       - ./openapi:/usr/share/nginx/html/specs/internal:ro
-      - ./vendor/zoho-crm/v8.0:/usr/share/nginx/html/specs/zoho:ro
+      - ./zoho/crm/v8.0:/usr/share/nginx/html/specs/zoho:ro
+

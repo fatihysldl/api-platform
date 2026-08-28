@@ -1,16 +1,16 @@
-# API Platform Starter
+﻿# API Platform Starter
 
 A team API catalog built around OpenAPI as the source of truth. It contains your own API specification and can synchronize the official Zoho CRM v8 OAS repository.
 
 ## Architecture
 
-- `openapi/openapi.yaml` — your internal/company API source of truth.
-- `vendor/zoho-crm/v8.0/*.json` — synchronized, unmodified Zoho CRM OAS files.
-- `swagger/swagger-config.json` — generated Swagger UI selector containing both internal and Zoho APIs.
-- `generated/postman/` — generated Postman collections, one for your API and one per Zoho OAS resource file.
-- `generated/sdk/` — generated SDKs.
+- `openapi/openapi.yaml` â€” your internal/company API source of truth.
+- `zoho/crm/v8.0/*.json` â€” synchronized, unmodified Zoho CRM OAS files.
+- `swagger/swagger-config.json` â€” generated Swagger UI selector containing both internal and Zoho APIs.
+- `generated/postman/` â€” generated Postman collections, one for your API and one per Zoho OAS resource file.
+- `generated/sdk/` â€” generated SDKs.
 
-Do not manually edit `vendor/zoho-crm`. Update it with `npm run sync:zoho`.
+Do not manually edit `zoho/crm`. Update it with `npm run sync:zoho`.
 
 ## Requirements
 
@@ -67,7 +67,7 @@ npm run generate
 The exact upstream commit used in the last synchronization is saved to:
 
 ```text
-vendor/zoho-crm/SOURCE.json
+zoho/crm/SOURCE.json
 ```
 
 ## Postman
@@ -110,7 +110,7 @@ For production use, generate only the Zoho resource SDKs the project actually ne
 
 `.github/workflows/openapi.yml` runs on pushes, pull requests, manual execution, and once per day. It downloads the current official Zoho OAS, validates the files and builds Swagger/Postman artifacts.
 
-The scheduled job currently detects/builds against changes but does not commit vendor updates back to the repository. If desired, add a second workflow that opens a pull request whenever `vendor/zoho-crm` differs from the repository version.
+The scheduled job currently detects/builds against changes but does not commit vendor updates back to the repository. If desired, add a second workflow that opens a pull request whenever `zoho/crm` differs from the repository version.
 
 ## How to add your own endpoint
 
@@ -146,3 +146,4 @@ Swagger and Postman are generated from the same contract, so they do not need to
 ## Zoho-specific note
 
 Zoho CRM OAS definitions are generic. Module-specific custom fields and organization-specific business rules are not fully represented by the official files. Keep organization-specific wrappers, schemas or APIs in your own `openapi/openapi.yaml` rather than editing the synchronized Zoho vendor files.
+
