@@ -110,8 +110,7 @@ for (const file of files) {
   console.log(`Merging: ${collectionName}`);
 
   merged.tags.push({
-    name: collectionName,
-    description: `Imported from ${file}`
+    name: collectionName
   });
 
   // Merge all paths from the collection.
