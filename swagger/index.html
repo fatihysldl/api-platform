@@ -17,27 +17,69 @@
       background: #fafafa;
     }
 
-    /* Hide the default Swagger branding */
     .swagger-ui .topbar .link {
       display: none;
     }
 
-    /* Keep the top bar content vertically aligned */
+    .swagger-ui .topbar {
+      padding: 8px 0;
+    }
+
     .swagger-ui .topbar .topbar-wrapper {
       display: flex;
       align-items: center;
+      max-width: none;
+      padding: 0 28px;
     }
 
-    /* Cloudyflex logo */
+    .cfx-brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      min-width: 320px;
+    }
+
     .cfx-logo {
-      height: 42px;
-      width: auto;
+      width: 180px;
+      height: 52px;
       object-fit: contain;
+      object-position: left center;
     }
 
-    /* Keep API selector on the right */
+    .cfx-title {
+      color: #ffffff;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1;
+      white-space: nowrap;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
     .swagger-ui .topbar .download-url-wrapper {
       margin-left: auto;
+      max-width: 760px;
+      flex: 1;
+    }
+
+    .swagger-ui .topbar .download-url-wrapper label {
+      color: #ffffff;
+    }
+
+    @media (max-width: 900px) {
+      .swagger-ui .topbar .topbar-wrapper {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .cfx-brand {
+        width: 100%;
+      }
+
+      .swagger-ui .topbar .download-url-wrapper {
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+      }
     }
   </style>
 </head>
@@ -72,14 +114,23 @@
           '.swagger-ui .topbar .topbar-wrapper'
         );
 
-        if (topbarWrapper && !document.querySelector('.cfx-logo')) {
-          const logo = document.createElement('img');
+        if (topbarWrapper && !document.querySelector('.cfx-brand')) {
+          const brand = document.createElement('div');
+          brand.className = 'cfx-brand';
 
+          const logo = document.createElement('img');
           logo.src = './cloudyflex-logo.png';
           logo.alt = 'Cloudyflex';
           logo.className = 'cfx-logo';
 
-          topbarWrapper.prepend(logo);
+          const title = document.createElement('div');
+          title.className = 'cfx-title';
+          title.textContent = 'CFX API Portal';
+
+          brand.appendChild(logo);
+          brand.appendChild(title);
+
+          topbarWrapper.prepend(brand);
         }
       }
     });
