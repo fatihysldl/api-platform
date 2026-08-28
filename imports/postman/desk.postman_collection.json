@@ -1,0 +1,52 @@
+{
+  "info": {
+    "_postman_id": "85949298-409b-4952-9dc6-a4189f1258b1",
+    "name": "desk",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32479913",
+    "_collection_link": "https://go.postman.co/collection/32479913-85949298-409b-4952-9dc6-a4189f1258b1?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "ticket ekleme",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "1000.020a850f5202b9bb7991d4f339c02c4d.89655f39f6031c8ff8d9f4122902bc56",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"subCategory\" : \"Sub General\",\r\n  \"productId\" : \"925197000000256063\",\r\n  \"contactId\" : \"925197000000280297\",\r\n  \"subject\" : \"Real Time analysis Requirement\",\r\n  \"dueDate\" : \"2016-06-21T16:16:16.000Z\",\r\n  \"departmentId\" : \"925197000000006907\",\r\n  \"channel\" : \"Email\",\r\n  \"description\" : \"Hai This is Description\",\r\n  \"language\" : \"English\",\r\n  \"priority\" : \"High\",\r\n  \"classification\" : \"\",\r\n  \"assigneeId\" : \"925197000000139001\",\r\n  \"phone\" : \"5415384347\",\r\n  \"category\" : \"general\",\r\n  \"email\" : \"carol@zylker.com\",\r\n  \"status\" : \"Open\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://desk.zoho.com/api/v1/tickets",
+          "protocol": "https",
+          "host": [
+            "desk",
+            "zoho",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "tickets"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

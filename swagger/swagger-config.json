@@ -5,6 +5,10 @@
       "name": "CFX Internal API"
     },
     {
+      "url": "specs/postman/desk.yaml",
+      "name": "Desk"
+    },
+    {
       "url": "specs/zoho/apis.json",
       "name": "Zoho CRM v8 - Available Apis"
     },

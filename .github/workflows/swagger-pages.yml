@@ -8,6 +8,8 @@ on:
       - 'openapi/**'
       - 'zoho/crm/**'
       - 'swagger/**'
+      - 'imports/postman/**'
+      - 'scripts/import-postman.mjs'
       - 'scripts/generate-swagger-config.mjs'
       - '.github/workflows/swagger-pages.yml'
 
@@ -42,12 +44,16 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+        
+      - name: Convert Postman collections to OpenAPI
+        run: npm run import:postman
 
       - name: Generate Swagger configuration
         run: npm run swagger:config
 
       - name: Build Swagger portal
         run: |
+          mkdir -p dist/specs/postman
           mkdir -p dist/specs/internal
           mkdir -p dist/specs/zoho
 
@@ -56,6 +62,10 @@ jobs:
           cp swagger/swagger-config.json dist/swagger-config.json
           cp openapi/openapi.yaml dist/specs/internal/openapi.yaml
           cp zoho/crm/v8.0/*.json dist/specs/zoho/
+
+          if compgen -G "generated/openapi/postman/*.yaml" > /dev/null; then
+            cp generated/openapi/postman/*.yaml dist/specs/postman/
+          fi
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
