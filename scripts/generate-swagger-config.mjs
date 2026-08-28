@@ -1,8 +1,8 @@
-import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+﻿import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 const root = process.cwd();
-const zohoDir = join(root, 'vendor', 'zoho-crm', 'v8.0');
+const zohoDir = join(root, 'zoho', 'crm', 'v8.0');
 const files = readdirSync(zohoDir).filter((f) => f.endsWith('.json')).sort();
 
 const urls = [
@@ -25,3 +25,4 @@ writeFileSync(join(root, 'swagger', 'swagger-config.json'), JSON.stringify({
   persistAuthorization: true
 }, null, 2) + '\n');
 console.log(`Swagger selector generated with ${urls.length} API definitions.`);
+

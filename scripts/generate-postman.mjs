@@ -42,7 +42,7 @@ convert(
   join(output, 'company-api.postman_collection.json')
 );
 
-const zohoDir = join(root, 'vendor', 'zoho-crm', 'v8.0');
+const zohoDir = join(root, 'zoho', 'crm', 'v8.0');
 
 const files = readdirSync(zohoDir)
   .filter((f) => f.endsWith('.json'))
@@ -58,3 +58,4 @@ for (const file of files) {
 }
 
 console.log(`Generated ${files.length + 1} Postman collections.`);
+
