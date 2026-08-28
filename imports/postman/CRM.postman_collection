@@ -1,0 +1,52 @@
+{
+  "info": {
+    "_postman_id": "3d496a67-40a4-447e-896c-95615daf87ee",
+    "name": "zoho crm create record",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32479913",
+    "_collection_link": "https://go.postman.co/collection/32479913-3d496a67-40a4-447e-896c-95615daf87ee?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "https://www.zohoapis.com/crm/v6/Leads",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "1000.e49df8c262423c7d0cf08cb586265d74.2a5eb184d9b729becc3558786cc8cd2f",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"data\": [\r\n        {\r\n            \"Lead_Source\": \"Reklam\",\r\n            \"Company\": \"Test\",\r\n            \"Last_Name\": \"Validation\",\r\n            \"First_Name\": \"fatih\",\r\n            \"Email\": \"p.daly@zylker.com\",\r\n            \"State\": \"Texas\",\r\n            \"Phone\":\"5415384347\"\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://www.zohoapis.com/crm/v6/Leads",
+          "protocol": "https",
+          "host": [
+            "www",
+            "zohoapis",
+            "com"
+          ],
+          "path": [
+            "crm",
+            "v6",
+            "Leads"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
