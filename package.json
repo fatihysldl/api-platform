@@ -15,12 +15,14 @@
     "generate": "npm run validate && npm run sync:zoho && npm run validate:zoho && npm run swagger:config && npm run postman",
     "docs": "npm run swagger:config && docker compose up swagger-ui",
     "docs:refresh": "npm run sync:zoho && npm run docs",
-    "import:postman": "node scripts/import-postman.mjs"
+    "import:postman": "node scripts/import-postman.mjs",
+    "merge:cfx": "node scripts/merge-cfx-openapi.mjs"
   },
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "^2.15.3",
     "@redocly/cli": "^1.25.5",
     "openapi-to-postmanv2": "^6.3.2",
-    "postman-to-openapi": "^1.7.3"
+    "postman-to-openapi": "^1.7.3",
+    "yaml": "^2.9.0"
   }
 }

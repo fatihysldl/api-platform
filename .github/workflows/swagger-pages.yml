@@ -12,6 +12,9 @@ on:
       - 'scripts/import-postman.mjs'
       - 'scripts/generate-swagger-config.mjs'
       - '.github/workflows/swagger-pages.yml'
+      - 'scripts/merge-cfx-openapi.mjs'
+      - 'package.json'
+      - 'package-lock.json'
 
   workflow_dispatch:
 
@@ -48,24 +51,22 @@ jobs:
       - name: Convert Postman collections to OpenAPI
         run: npm run import:postman
 
+      - name: Merge Postman APIs into CFX Internal API
+        run: npm run merge:cfx
+
       - name: Generate Swagger configuration
         run: npm run swagger:config
 
       - name: Build Swagger portal
         run: |
-          mkdir -p dist/specs/postman
           mkdir -p dist/specs/internal
           mkdir -p dist/specs/zoho
 
           cp swagger/index.html dist/index.html
           cp swagger/cloudyflex-logo.png dist/cloudyflex-logo.png
           cp swagger/swagger-config.json dist/swagger-config.json
-          cp openapi/openapi.yaml dist/specs/internal/openapi.yaml
+          cp generated/openapi/cfx-internal.yaml dist/specs/internal/cfx-internal.yaml
           cp zoho/crm/v8.0/*.json dist/specs/zoho/
-
-          if compgen -G "generated/openapi/postman/*.yaml" > /dev/null; then
-            cp generated/openapi/postman/*.yaml dist/specs/postman/
-          fi
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
