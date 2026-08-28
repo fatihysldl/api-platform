@@ -1,7 +1,7 @@
-import { readdirSync, readFileSync } from 'node:fs';
+﻿import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-const dir = join(process.cwd(), 'vendor', 'zoho-crm', 'v8.0');
+const dir = join(process.cwd(), 'zoho', 'crm', 'v8.0');
 const files = readdirSync(dir).filter((f) => f.endsWith('.json')).sort();
 if (!files.length) throw new Error('No Zoho OAS JSON files found. Run npm run sync:zoho first.');
 
@@ -18,3 +18,5 @@ for (const file of files) {
 }
 if (failed) process.exit(1);
 console.log(`Validated ${files.length} Zoho OAS files.`);
+
+
